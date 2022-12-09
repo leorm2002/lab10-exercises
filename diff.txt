@@ -1,0 +1,26 @@
+URL https://github.com/leorm2002/lab10-exercises.git
+
+CLONE git@github.com:leorm2002/lab10-exercises.git
+
+BRANCH exercises
+
+CASA 101-lambda-utilities-for-lists-and-maps
+
+La mia soluzione è simile alla soluzione proposta dal professore. 
+In optFilter ho utilizzato Optional.of invece di ofNullable, in group invece di Arrays.asList() uso Set.of().
+In fill ho fatto un foreach su sulle keys e non sulle entry
+
+CASA 102-stream-utilities-for-music-model
+
+Anche qua molti metodi sono simili. In orderedSongNames prima ordino le canzomni confrontandone il titolo (tramite comparing) 
+poi mappo ogni oggetto canzone al suo nome. 
+Siccome l'operazione di ottenere le canzoni presenti in un album è ripetuta più volte ho creato un metodo privato che
+dato un nome di un album mi restituisce una stream delle canzoni presenti in esso. 
+In longest song invece di usare un collector prima ordino e poi trovo il primo (molto meno efficente), 
+stesso errore in longestAlbum. Inoltre dovrei utilizzare più la method reference. 
+
+CASA103-stream-utilities-for-text-processing
+TOLOWER,COUNT e LINES sono implementati diversamente, in particolare ho utilizzato le stream anche per questi 
+(anche se si poteva fare tranquillamente senza) vista l'indicazione del commento iniziale. 
+Gli altri due metodi sono implementati in maniera simile con due differenze: 
+invece si Arrays.stream ho usato Stram.of e che invece delle regex ho utilizzato una plit sugli spazi vuoti

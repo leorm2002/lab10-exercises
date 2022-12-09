@@ -44,10 +44,14 @@ public final class LambdaFilter extends JFrame {
         TOLOWERCASE("To Lower Case", (text) -> Stream.of(text.split(""))
                                                         .map(c -> c.toLowerCase())
                                                         .collect(Collectors.joining(""))),
-        COUNTCHAR("Count chars", (text) ->Integer.toString(Stream.of(text.split(""))
-                                                        .toList().size())),
-        COUNTLINES("Count lines", (text) ->Integer.toString(Stream.of(text.split("\n"))
-                                                        .toList().size())),
+        COUNTCHAR("Count chars", (text) ->Integer.toString(
+                                                            Stream.of(text.split(""))
+                                                            .toList()
+                                                            .size())),
+        COUNTLINES("Count lines", (text) ->Integer.toString(
+                                                            Stream.of(text.split("\n"))
+                                                            .toList()
+                                                            .size())),
         LISTALPHABETICALLY("List the words in alphabetical order", (text) -> Stream.of(text.split(" "))
                                                         .sorted()   
                                                         .collect(Collectors.joining("\n"))
